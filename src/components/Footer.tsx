@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div>
             <a href="#" className="flex items-center gap-1 font-mono text-lg font-semibold mb-4">
-              <span className="text-primary">&lt;RF</span>
+              <span className="text-primary">&lt;RE</span>
               <span className="text-muted-foreground">/&gt;</span>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -58,7 +58,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2026 Robert Ionut Fundulea. All rights reserved.
+            © 2026 Rei Elric. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Built with{" "}
