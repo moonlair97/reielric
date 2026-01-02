@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -61,13 +62,13 @@ const Projects = () => {
 
         {/* View All Button */}
         <div className="flex justify-center">
-          <a
-            href="#"
+          <Link
+            to="/projects"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-foreground font-medium text-sm hover:bg-secondary/80 hover:border-primary/30 transition-all duration-200"
           >
             View all projects
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
