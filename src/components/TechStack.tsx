@@ -1,4 +1,5 @@
 import { Rocket, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TechStack = () => {
   const technologies = [
@@ -41,12 +42,12 @@ const TechStack = () => {
             </div>
             <h3 className="font-semibold text-foreground mb-2">Let's collaborate</h3>
             <p className="text-sm text-muted-foreground mb-5">Have a project in mind?</p>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex w-full items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-foreground font-medium text-sm hover:from-pink-500/30 hover:to-purple-500/30 transition-all duration-200"
             >
               Send message
-            </a>
+            </Link>
           </div>
         </div>
       </div>

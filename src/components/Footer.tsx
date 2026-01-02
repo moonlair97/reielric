@@ -1,7 +1,14 @@
 import { Github, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const quickLinks = ["Home", "About", "Projects", "Pricing", "Contact"];
+  const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Pricing", path: "/pricing" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <footer className="border-t border-border py-12 px-6 mt-16">
@@ -9,10 +16,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           {/* Logo & Description */}
           <div>
-            <a href="#" className="flex items-center gap-1 font-mono text-lg font-semibold mb-4">
+            <Link to="/" className="flex items-center gap-1 font-mono text-lg font-semibold mb-4">
               <span className="text-primary">&lt;RE</span>
               <span className="text-muted-foreground">/&gt;</span>
-            </a>
+            </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Software Engineer & Fullstack Web Developer specialized in Next.js, React, and modern web technologies.
             </p>
@@ -23,13 +30,13 @@ const Footer = () => {
             <h4 className="font-mono text-primary text-sm font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -40,13 +47,15 @@ const Footer = () => {
             <h4 className="font-mono text-primary text-sm font-semibold mb-4">Connect</h4>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://github.com/ReiElric"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2.5 rounded-lg bg-secondary border border-border text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all duration-200"
               >
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="mailto:rei.elric@email.com"
                 className="p-2.5 rounded-lg bg-secondary border border-border text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all duration-200"
               >
                 <Mail className="w-4 h-4" />
@@ -62,7 +71,7 @@ const Footer = () => {
           </p>
           <p className="text-xs text-muted-foreground">
             Built with{" "}
-            <span className="text-primary">Next.js</span>
+            <span className="text-primary">React</span>
             {" "}&{" "}
             <span className="text-pink-400">TypeScript</span>
           </p>

@@ -1,4 +1,5 @@
 import { ArrowRight, Code, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -31,19 +32,19 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#projects"
+              <Link
+                to="/projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors"
               >
                 View Projects
                 <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground font-medium text-sm hover:bg-secondary/80 transition-colors"
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </div>
 
