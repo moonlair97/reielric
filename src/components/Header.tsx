@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="#" className="flex items-center gap-1 font-mono text-lg font-semibold">
-          <span className="text-primary">&lt;RF</span>
+          <span className="text-primary">&lt;RE</span>
           <span className="text-muted-foreground">/&gt;</span>
         </a>
 
